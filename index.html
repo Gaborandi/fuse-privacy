@@ -13,15 +13,31 @@
     <meta name="theme-color" content="#02030a">
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./assets/site.css">
+    <script src="./assets/i18n.js" defer></script>
   </head>
-  <body class="home">
+  <body class="home" data-page="home">
     <header class="site-header">
       <a class="brand-link" href="./" aria-label="FUSE home">FUSE</a>
       <nav class="nav-links" aria-label="Main navigation">
-        <a href="#play">Play</a>
-        <a href="#themes">Themes</a>
-        <a href="#modes">Modes</a>
-        <a href="./privacy/">Privacy</a>
+        <a href="#play" data-i18n="nav.play">Play</a>
+        <a href="#themes" data-i18n="nav.themes">Themes</a>
+        <a href="#modes" data-i18n="nav.modes">Modes</a>
+        <a href="./privacy/" data-i18n="nav.privacy">Privacy</a>
+        <label class="language-control">
+          <span data-i18n="nav.language">Language</span>
+          <select class="language-select" data-language-select aria-label="Language">
+            <option value="en">English</option>
+            <option value="ar">العربية</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="pt">Português</option>
+            <option value="it">Italiano</option>
+            <option value="ja">日本語</option>
+            <option value="ko">한국어</option>
+            <option value="zh">简体中文</option>
+          </select>
+        </label>
       </nav>
     </header>
 
@@ -35,28 +51,28 @@
 
         <div class="hero-layout">
           <div class="hero-copy">
-            <p class="eyebrow">Premium cosmic puzzle game for iPhone and iPad</p>
+            <p class="eyebrow" data-i18n="home.hero.eyebrow">Premium cosmic puzzle game for iPhone and iPad</p>
             <h1>FUSE</h1>
-            <p class="hero-lead">
+            <p class="hero-lead" data-i18n="home.hero.lead">
               Ignite one star, bend the chain through gravity and dark matter,
               then watch the field resolve into silence.
             </p>
             <div class="hero-actions">
-              <a class="button primary" href="#themes">Explore themes</a>
-              <a class="button" href="#play">See gameplay</a>
+              <a class="button primary" href="#themes" data-i18n="home.hero.exploreThemes">Explore themes</a>
+              <a class="button" href="#play" data-i18n="home.hero.seeGameplay">See gameplay</a>
             </div>
             <dl class="signal-row">
               <div>
                 <dt>60</dt>
-                <dd>campaign levels</dd>
+                <dd data-i18n="home.stats.levels">campaign levels</dd>
               </div>
               <div>
                 <dt>8</dt>
-                <dd>cosmic themes</dd>
+                <dd data-i18n="home.stats.themes">cosmic themes</dd>
               </div>
               <div>
                 <dt>5</dt>
-                <dd>game modes</dd>
+                <dd data-i18n="home.stats.modes">game modes</dd>
               </div>
             </dl>
           </div>
@@ -67,15 +83,15 @@
             </div>
             <div class="theme-orbit orbit-one">
               <img src="./assets/themes/earth.jpg" alt="">
-              <span>Earth</span>
+              <span data-i18n="theme.earth">Earth</span>
             </div>
             <div class="theme-orbit orbit-two">
               <img src="./assets/themes/crab.jpg" alt="">
-              <span>Crab</span>
+              <span data-i18n="theme.crab">Crab</span>
             </div>
             <div class="theme-orbit orbit-three">
               <img src="./assets/themes/saturn.jpg" alt="">
-              <span>Saturn</span>
+              <span data-i18n="theme.saturn">Saturn</span>
             </div>
           </div>
         </div>
@@ -83,10 +99,10 @@
 
       <section class="section play-section" id="play">
         <div class="section-inner">
-          <div class="section-kicker">The board</div>
+          <div class="section-kicker" data-i18n="home.play.kicker">The board</div>
           <div class="split-head">
-            <h2>Simple touch. Expensive consequences.</h2>
-            <p>
+            <h2 data-i18n="home.play.heading">Simple touch. Expensive consequences.</h2>
+            <p data-i18n="home.play.copy">
               FUSE is a one-tap chain reaction game with readable star grammar:
               standard stars carry the route, pulsars rotate pressure, dark
               stars absorb energy, and gravity wells curve the outcome.
@@ -96,20 +112,20 @@
           <div class="play-grid">
             <article class="play-card">
               <span class="play-number">01</span>
-              <h3>Ignite</h3>
-              <p>Choose the first star and commit. The board answers with light,
+              <h3 data-i18n="home.play.card1.title">Ignite</h3>
+              <p data-i18n="home.play.card1.copy">Choose the first star and commit. The board answers with light,
               sound, haptics, and a visible fuse window.</p>
             </article>
             <article class="play-card">
               <span class="play-number">02</span>
-              <h3>Chain</h3>
-              <p>Fragments cross the field, bend around wells, reflect through
+              <h3 data-i18n="home.play.card2.title">Chain</h3>
+              <p data-i18n="home.play.card2.copy">Fragments cross the field, bend around wells, reflect through
               neutron stars, and bridge distant clusters.</p>
             </article>
             <article class="play-card">
               <span class="play-number">03</span>
-              <h3>Resolve</h3>
-              <p>A clean cascade ends with a deliberate pause so the result
+              <h3 data-i18n="home.play.card3.title">Resolve</h3>
+              <p data-i18n="home.play.card3.copy">A clean cascade ends with a deliberate pause so the result
               reads before the next puzzle asks for your hand.</p>
             </article>
           </div>
@@ -119,31 +135,31 @@
       <section class="section star-stage" aria-label="Star types">
         <div class="section-inner star-stage-inner">
           <div>
-            <div class="section-kicker">Star language</div>
-            <h2>Every color is a rule, not decoration.</h2>
-            <p class="stage-copy">
+            <div class="section-kicker" data-i18n="home.stars.kicker">Star language</div>
+            <h2 data-i18n="home.stars.heading">Every color is a rule, not decoration.</h2>
+            <p class="stage-copy" data-i18n="home.stars.copy">
               The game keeps live puzzle stars bright and distinct, while
               themes stay in menus and galleries so the playfield never fights
               your fingers.
             </p>
           </div>
           <div class="star-map" aria-label="FUSE star type legend">
-            <div class="star-node standard" style="--star:#f5fbff"><b>Standard</b><span>baseline cascade</span></div>
-            <div class="star-node neutron" style="--star:#5edbff"><b>Neutron</b><span>angle reading</span></div>
-            <div class="star-node binary" style="--star:#ffd166"><b>Binary</b><span>linked reach</span></div>
-            <div class="star-node giant" style="--star:#ff4d2e"><b>Red giant</b><span>distant bridge</span></div>
-            <div class="star-node dark" style="--star:#8a4cff"><b>Dark</b><span>stored energy</span></div>
-            <div class="star-node pulsar" style="--star:#00f5ff"><b>Pulsar</b><span>rotating beams</span></div>
+            <div class="star-node standard" style="--star:#f5fbff"><b data-i18n="star.standard">Standard</b><span data-i18n="star.standard.copy">baseline cascade</span></div>
+            <div class="star-node neutron" style="--star:#5edbff"><b data-i18n="star.neutron">Neutron</b><span data-i18n="star.neutron.copy">angle reading</span></div>
+            <div class="star-node binary" style="--star:#ffd166"><b data-i18n="star.binary">Binary</b><span data-i18n="star.binary.copy">linked reach</span></div>
+            <div class="star-node giant" style="--star:#ff4d2e"><b data-i18n="star.giant">Red giant</b><span data-i18n="star.giant.copy">distant bridge</span></div>
+            <div class="star-node dark" style="--star:#8a4cff"><b data-i18n="star.dark">Dark</b><span data-i18n="star.dark.copy">stored energy</span></div>
+            <div class="star-node pulsar" style="--star:#00f5ff"><b data-i18n="star.pulsar">Pulsar</b><span data-i18n="star.pulsar.copy">rotating beams</span></div>
           </div>
         </div>
       </section>
 
       <section class="section theme-atlas" id="themes">
         <div class="section-inner">
-          <div class="section-kicker">Theme atlas</div>
+          <div class="section-kicker" data-i18n="home.themes.kicker">Theme atlas</div>
           <div class="split-head">
-            <h2>Eight living cosmic backdrops.</h2>
-            <p>
+            <h2 data-i18n="home.themes.heading">Eight living cosmic backdrops.</h2>
+            <p data-i18n="home.themes.copy">
               Bright, image-led cosmic scenes frame the menus, galleries, and
               premium surfaces. The playable field stays dark and precise so
               the stars remain unmistakable.
@@ -153,35 +169,35 @@
           <div class="theme-mosaic">
             <figure class="theme-panel wide">
               <img src="./assets/themes/carina.jpg" alt="Carina nebula FUSE theme">
-              <figcaption><strong>Carina</strong><span>Nebula cliffs, blue stars, hot dust</span></figcaption>
+              <figcaption><strong data-i18n="theme.carina">Carina</strong><span data-i18n="theme.carina.copy">Nebula cliffs, blue stars, hot dust</span></figcaption>
             </figure>
             <figure class="theme-panel tall">
               <img src="./assets/themes/earth.jpg" alt="Earth FUSE theme">
-              <figcaption><strong>Earth</strong><span>Blue marble calm</span></figcaption>
+              <figcaption><strong data-i18n="theme.earth">Earth</strong><span data-i18n="theme.earth.copy">Blue marble calm</span></figcaption>
             </figure>
             <figure class="theme-panel">
               <img src="./assets/themes/helix.jpg" alt="Helix nebula FUSE theme">
-              <figcaption><strong>Helix</strong><span>Red shell, cyan core</span></figcaption>
+              <figcaption><strong data-i18n="theme.helix">Helix</strong><span data-i18n="theme.helix.copy">Red shell, cyan core</span></figcaption>
             </figure>
             <figure class="theme-panel">
               <img src="./assets/themes/sirius.jpg" alt="Sirius deep field FUSE theme">
-              <figcaption><strong>Sirius</strong><span>Deep field glitter</span></figcaption>
+              <figcaption><strong data-i18n="theme.sirius">Sirius</strong><span data-i18n="theme.sirius.copy">Deep field glitter</span></figcaption>
             </figure>
             <figure class="theme-panel wide">
               <img src="./assets/themes/crab.jpg" alt="Crab nebula FUSE theme">
-              <figcaption><strong>Crab</strong><span>Supernova wreckage in motion</span></figcaption>
+              <figcaption><strong data-i18n="theme.crab">Crab</strong><span data-i18n="theme.crab.copy">Supernova wreckage in motion</span></figcaption>
             </figure>
             <figure class="theme-panel">
               <img src="./assets/themes/moon.jpg" alt="Luna FUSE theme">
-              <figcaption><strong>Luna</strong><span>Lunar quiet</span></figcaption>
+              <figcaption><strong data-i18n="theme.luna">Luna</strong><span data-i18n="theme.luna.copy">Lunar quiet</span></figcaption>
             </figure>
             <figure class="theme-panel">
               <img src="./assets/themes/saturn.jpg" alt="Saturn FUSE theme">
-              <figcaption><strong>Saturn</strong><span>Ring shadow geometry</span></figcaption>
+              <figcaption><strong data-i18n="theme.saturn">Saturn</strong><span data-i18n="theme.saturn.copy">Ring shadow geometry</span></figcaption>
             </figure>
             <figure class="theme-panel wide">
               <img src="./assets/themes/void.jpg" alt="Void FUSE theme">
-              <figcaption><strong>Void</strong><span>Black dust, distant light</span></figcaption>
+              <figcaption><strong data-i18n="theme.void">Void</strong><span data-i18n="theme.void.copy">Black dust, distant light</span></figcaption>
             </figure>
           </div>
         </div>
@@ -189,10 +205,10 @@
 
       <section class="section modes-section" id="modes">
         <div class="section-inner">
-          <div class="section-kicker">Modes</div>
+          <div class="section-kicker" data-i18n="home.modes.kicker">Modes</div>
           <div class="split-head">
-            <h2>Campaign, daily ritual, and pressure modes.</h2>
-            <p>
+            <h2 data-i18n="home.modes.heading">Campaign, daily ritual, and pressure modes.</h2>
+            <p data-i18n="home.modes.copy">
               FUSE moves between authored puzzles, one shared daily board, and
               longer pressure runs, all built around fast retries and clear
               cascade feedback.
@@ -203,22 +219,22 @@
             <article class="mode-shot">
               <img src="./assets/screenshots/level58-phone.png" alt="Campaign gameplay screenshot">
               <div>
-                <h3>Campaign</h3>
-                <p>Six constellations and sixty authored puzzle fields.</p>
+                <h3 data-i18n="mode.campaign">Campaign</h3>
+                <p data-i18n="mode.campaign.copy">Six constellations and sixty authored puzzle fields.</p>
               </div>
             </article>
             <article class="mode-shot">
               <img src="./assets/screenshots/daily-mode.png" alt="Daily Ignition screenshot">
               <div>
-                <h3>Daily Ignition</h3>
-                <p>A deterministic daily field with one clean attempt.</p>
+                <h3 data-i18n="mode.daily">Daily Ignition</h3>
+                <p data-i18n="mode.daily.copy">A deterministic daily field with one clean attempt.</p>
               </div>
             </article>
             <article class="mode-shot">
               <img src="./assets/screenshots/endless-mode.png" alt="Endless mode screenshot">
               <div>
-                <h3>Endless</h3>
-                <p>Escalating cascades, recovery pressure, and long chains.</p>
+                <h3 data-i18n="mode.endless">Endless</h3>
+                <p data-i18n="mode.endless.copy">Escalating cascades, recovery pressure, and long chains.</p>
               </div>
             </article>
           </div>
@@ -231,18 +247,18 @@
             <img src="./assets/screenshots/level58-complete-phone.png" alt="FUSE ignition complete result screen">
           </div>
           <div>
-            <div class="section-kicker">Release profile</div>
-            <h2>Premium look. Readable playfield. Clear player choices.</h2>
-            <p>
+            <div class="section-kicker" data-i18n="home.finish.kicker">Release profile</div>
+            <h2 data-i18n="home.finish.heading">Premium look. Readable playfield. Clear player choices.</h2>
+            <p data-i18n="home.finish.copy">
               FUSE uses real cosmic theme art outside gameplay, high-contrast
               stars inside gameplay, optional rewarded ads, StoreKit purchases,
               and local-first progress. The legal pages are linked directly
               below for App Store and player review.
             </p>
             <div class="hero-actions">
-              <a class="button primary" href="./privacy/">Privacy policy</a>
-              <a class="button" href="./terms/">Terms</a>
-              <a class="button" href="./support/">Support</a>
+              <a class="button primary" href="./privacy/" data-i18n="nav.privacyPolicy">Privacy policy</a>
+              <a class="button" href="./terms/" data-i18n="nav.terms">Terms</a>
+              <a class="button" href="./support/" data-i18n="nav.support">Support</a>
             </div>
           </div>
         </div>
@@ -251,11 +267,11 @@
 
     <footer class="site-footer">
       <div class="footer-inner">
-        <span>FUSE - an independent mobile game by Gaborandi.</span>
+        <span data-i18n="footer.byline">FUSE - an independent mobile game by Gaborandi.</span>
         <nav class="footer-links" aria-label="Legal navigation">
-          <a href="./privacy/">Privacy</a>
-          <a href="./terms/">Terms</a>
-          <a href="./support/">Support</a>
+          <a href="./privacy/" data-i18n="nav.privacy">Privacy</a>
+          <a href="./terms/" data-i18n="nav.terms">Terms</a>
+          <a href="./support/" data-i18n="nav.support">Support</a>
         </nav>
       </div>
     </footer>

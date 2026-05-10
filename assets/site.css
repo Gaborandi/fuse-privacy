@@ -117,6 +117,28 @@ dd {
   text-transform: uppercase;
 }
 
+.language-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  color: #c8cede;
+}
+
+.language-select {
+  width: 132px;
+  min-height: 34px;
+  border: 1px solid rgba(205, 220, 255, 0.28);
+  border-radius: var(--radius);
+  color: var(--ink);
+  background: rgba(4, 8, 18, 0.82);
+  font: inherit;
+  font-size: 11px;
+  font-weight: 760;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
 .nav-links a,
 .footer-links a {
   text-decoration: none;
@@ -736,6 +758,64 @@ h3 {
   background: rgba(0, 0, 0, 0.52);
 }
 
+html[dir="rtl"] body {
+  direction: rtl;
+}
+
+html[dir="rtl"] .site-header,
+html[dir="rtl"] .hero-layout,
+html[dir="rtl"] .split-head,
+html[dir="rtl"] .star-stage-inner,
+html[dir="rtl"] .finish-layout,
+html[dir="rtl"] .footer-inner {
+  direction: rtl;
+}
+
+html[dir="rtl"] .hero-showcase,
+html[dir="rtl"] .phone-frame,
+html[dir="rtl"] .theme-mosaic,
+html[dir="rtl"] .mode-gallery {
+  direction: ltr;
+}
+
+html[dir="rtl"] .nav-links {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .signal-row div + div {
+  border-left: 0;
+  border-right: 1px solid rgba(180, 204, 255, 0.18);
+}
+
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ja"] h1,
+html[lang="ja"] h2,
+html[lang="ko"] h1,
+html[lang="ko"] h2,
+html[lang="zh"] h1,
+html[lang="zh"] h2 {
+  line-height: 1.02;
+}
+
+html[lang="de"] h2,
+html[lang="fr"] h2,
+html[lang="pt"] h2,
+html[lang="ar"] h2 {
+  font-size: clamp(38px, 5.2vw, 78px);
+}
+
+html[lang="ar"] .eyebrow,
+html[lang="ar"] .section-kicker,
+html[lang="ja"] .eyebrow,
+html[lang="ja"] .section-kicker,
+html[lang="ko"] .eyebrow,
+html[lang="ko"] .section-kicker,
+html[lang="zh"] .eyebrow,
+html[lang="zh"] .section-kicker {
+  letter-spacing: 0.06em;
+}
+
 .footer-inner {
   width: min(var(--max), 100%);
   margin: 0 auto;
@@ -862,9 +942,22 @@ h3 {
   }
 
   .nav-links {
-    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 6px;
+    max-width: calc(100% - 54px);
+    font-size: 8px;
+    letter-spacing: 0.05em;
+  }
+
+  .language-control span {
+    display: none;
+  }
+
+  .language-select {
+    width: 72px;
+    min-height: 28px;
     font-size: 9px;
-    letter-spacing: 0.08em;
   }
 
   .hero-premium {
