@@ -1,16 +1,33 @@
-# FUSE — Privacy Policy
+# FUSE Website
 
-Hosted at <https://gaborandi.github.io/fuse-privacy/>.
+Public GitHub Pages site for FUSE, an independent mobile chain reaction puzzle
+game by Gaborandi.
 
-This repo exists solely to serve the public privacy policy HTML page referenced by:
-- Apple App Store Connect (app listing metadata)
-- Google AdMob's User Messaging Platform (consent dialogs)
+Live target:
 
-No application code lives here — the game itself is in the `Fuse` repository.
+- Home: <https://gaborandi.github.io/fuse-privacy/>
+- Privacy: <https://gaborandi.github.io/fuse-privacy/privacy/>
+- Terms: <https://gaborandi.github.io/fuse-privacy/terms/>
+- Support: <https://gaborandi.github.io/fuse-privacy/support/>
 
-## Updating the policy
+This repository hosts the public website, privacy policy, terms, support page,
+theme imagery, and gameplay screenshots referenced by the iOS app and App Store
+metadata. The game source remains in `/Users/ahmedalmeldin/Documents/Fuse`.
 
-1. Edit `index.html`.
-2. Update the "Last updated" date at the top.
-3. `git commit && git push`.
-4. GitHub Pages rebuilds in under a minute.
+## Local Preview
+
+From the game source workspace:
+
+```bash
+python3 -m http.server 4177 --directory website
+```
+
+Then open <http://127.0.0.1:4177/>.
+
+## Release Notes
+
+- Keep all public pages aligned with the actual shipping behavior of the app.
+- Do not claim there are no ads, analytics, consent flows, or purchases while
+  those systems remain part of the release build.
+- Use English as the source of truth unless complete translations are added for
+  every public legal page.
