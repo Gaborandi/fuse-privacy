@@ -1,6 +1,6 @@
-# Star Cascade website
+# Catch Fire website
 
-Public pages for Star Cascade: Chain Reaction (formerly FUSE), served by GitHub Pages at https://gaborandi.github.io/fuse-privacy/
+Public pages for Catch Fire: Chain Reaction (formerly FUSE), served by GitHub Pages at https://gaborandi.github.io/fuse-privacy/
 
 - `/` the game
 - `/privacy/` privacy policy
