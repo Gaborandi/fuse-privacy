@@ -1,6 +1,6 @@
-# FUSE website
+# Star Cascade website
 
-Public pages for FUSE: One Tap Star Puzzle, served by GitHub Pages at https://gaborandi.github.io/fuse-privacy/
+Public pages for Star Cascade: Chain Reaction (formerly FUSE), served by GitHub Pages at https://gaborandi.github.io/fuse-privacy/
 
 - `/` the game
 - `/privacy/` privacy policy
